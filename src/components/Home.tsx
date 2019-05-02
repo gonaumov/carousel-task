@@ -14,8 +14,8 @@ class Home extends Component<OwnProps> {
         const { items } = this.props
         return (
             <ul>
-            {items.map((item) => (
-                <React.Fragment>
+            {items.map((item, index) => (
+                <React.Fragment key={(new Date()).getTime() + index}>
                     <li>
                         <img src={item.image} alt={item.description} title={item.description}/>
                         {item.description}
