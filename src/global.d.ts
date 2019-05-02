@@ -6,5 +6,10 @@ interface Item {
 
 interface State {
     items: Array<Item>
-    pageNumber: number | null
+    itemsPerPage: 1 | 4
+}
+
+interface disabled {
+    next: boolean
+    previous: boolean
 }

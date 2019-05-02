@@ -141,7 +141,7 @@ const initialState: State = {
             "price": 100
           }   
     ],
-    pageNumber: null
+    itemsPerPage: 4
 }
 
 export default initialState
