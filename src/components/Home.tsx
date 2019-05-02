@@ -17,7 +17,8 @@ class Home extends Component<OwnProps> {
             {items.map((item) => (
                 <React.Fragment>
                     <li>
-                        <img src={item.image} title={item.description}/>
+                        <img src={item.image} alt={item.description} title={item.description}/>
+                        {item.description}
                         {item.price}
                     </li>
                 </React.Fragment>
