@@ -7,7 +7,7 @@ interface LinksProps {
     match: match<{pageNumber: string | undefined}>
 }
 
-const Links: React.SFC<LinksProps> = (props) => {
+const Links:  React.FunctionComponent<LinksProps> = (props) => {
     const {disabled, match} = props
     return (<>
     <div className='pagination-holder'>
