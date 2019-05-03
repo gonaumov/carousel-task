@@ -22,7 +22,7 @@ const Home: React.FunctionComponent<OwnProps & TDispatchProps> = (props) => {
 
     useEffect(() => {
         const changeItemsPerPage = () => {
-            if(window.innerWidth <= 800 && window.innerHeight <= 600) {
+            if(window.innerWidth <= 800 || window.innerHeight <= 600) {
                 updateItemsPerPage(1)
             } else {
                 updateItemsPerPage(4)
@@ -30,7 +30,9 @@ const Home: React.FunctionComponent<OwnProps & TDispatchProps> = (props) => {
         }
 
         window.addEventListener('resize', changeItemsPerPage);
-        
+
+        changeItemsPerPage()
+
         return () => {
             window.removeEventListener('resize', changeItemsPerPage);
         }
