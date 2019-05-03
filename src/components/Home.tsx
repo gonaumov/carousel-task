@@ -36,7 +36,7 @@ const Home: React.FunctionComponent<OwnProps & TDispatchProps> = (props) => {
         return () => {
             window.removeEventListener('resize', changeItemsPerPage);
         }
-    })
+    }, [updateItemsPerPage])
 
     return (
         <>
